@@ -338,9 +338,9 @@ const App = () => {
             <MemeContainer reverse>
               <MemeImage src="/patrick.jpg" alt="New Meme 2" className="meme-image" />
               <MemeText className="meme-text">
-                <MemeTitle>Try not to Tweak</MemeTitle>
+                <MemeTitle>Lazy Patrick</MemeTitle>
                 <MemeParagraph>
-                  I'm not tweaking im chill!
+                  When you have a lot to do, but you prefer to chill like Patrick.
                 </MemeParagraph>
               </MemeText>
             </MemeContainer>
@@ -350,9 +350,9 @@ const App = () => {
             <MemeContainer>
               <MemeImage src="/images-1.jpg" alt="New Meme 3" className="meme-image" />
               <MemeText className="meme-text">
-                <MemeTitle>All good just tired</MemeTitle>
+                <MemeTitle>Deep Thoughts</MemeTitle>
                 <MemeParagraph>
-                  Just need some sleep bro
+                  When you dive deep into thoughts and realize you forgot what you were thinking about.
                 </MemeParagraph>
               </MemeText>
             </MemeContainer>
