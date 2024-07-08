@@ -359,7 +359,9 @@ const App = () => {
           </MemeSection>
 
           <Button onClick={increaseBrainLoad}>
-            Add more to my mind!
+
+            <a href='https://t.me/TonOnMyMindPortal'>Take a break with us</a>
+           
           </Button>
         </Content>
       </AppContainer>
