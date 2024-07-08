@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled, { createGlobalStyle, keyframes } from 'styled-components';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -106,11 +106,12 @@ const Content = styled.div`
 const MemeSection = styled.section`
   margin-bottom: 4rem;
   background-color: ${props => props.bgColor || '#1f1f2e'};
-  padding: 2rem;
+  padding: ${props => props.padding || '2rem'};
   border-radius: 1rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   opacity: 0;
   transform: translateY(50px);
+  text-align: center;
 `;
 
 const MemeContainer = styled.div`
@@ -138,6 +139,7 @@ const MemeImage = styled.img`
 
 const MemeText = styled.div`
   flex: 1;
+  text-align: center;
 `;
 
 const MemeTitle = styled.h2`
@@ -231,6 +233,20 @@ const App = () => {
             duration: 0.8,
             ease: 'power3.out'
           });
+
+          const images = section.querySelectorAll('.meme-image');
+          const texts = section.querySelectorAll('.meme-text');
+          gsap.to(images, {
+            scale: 1,
+            duration: 0.8,
+            stagger: 0.2,
+            ease: 'power3.out',
+            delay: 0.2,
+          });
+          gsap.fromTo(texts, 
+            { opacity: 0, y: 20 },
+            { opacity: 1, y: 0, duration: 1, stagger: 0.3, delay: 0.5 }
+          );
         },
       });
     });
@@ -266,42 +282,77 @@ const App = () => {
         </Header>
 
         <Content>
-          <MemeSection bgColor="#1a2639" className="meme-section">
+          <MemeSection bgColor="#1a2639" padding="3rem" className="meme-section">
             <MemeContainer>
               <MemeImage src="/main.jpg" alt="Stressed out person" className="meme-image" />
-              <MemeText>
+              <MemeText className="meme-text">
                 <MemeTitle>The Stress Spiral</MemeTitle>
                 <MemeParagraph>
-                 Bills coming in and you still waiting on that life chainging 100x coin. Maybe its this one idk
+                  Bills coming in and you still waiting on that life-changing 100x coin. Maybe it's this one, who knows?
                 </MemeParagraph>
               </MemeText>
             </MemeContainer>
           </MemeSection>
 
-          <MemeSection bgColor="#2c3e50" className="meme-section">
+          <MemeSection bgColor="#2c3e50" padding="4rem" className="meme-section">
             <MemeContainer reverse>
               <MemeImage src="/tonOnmymind.jpg" alt="Brain overload" className="meme-image" />
-              <MemeText>
+              <MemeText className="meme-text">
                 <MemeTitle>Average Male Day</MemeTitle>
                 <MemeParagraph>
                   To-do list:<br/>
                   1) Breathe<br/>
                   2) Survive<br/>
-                  3) Dont become homeless
+                  3) Don't become homeless
                 </MemeParagraph>
               </MemeText>
             </MemeContainer>
           </MemeSection>
 
-          <MemeSection bgColor="#34495e" className="meme-section">
+          <MemeSection bgColor="#34495e" padding="5rem" className="meme-section">
             <MemeContainer>
               <MemeImage src="/tononmymind3.jpeg" alt="Mental explosion" className="meme-image" />
-              <MemeText>
-                <MemeTitle>We gone be aight</MemeTitle>
+              <MemeText className="meme-text">
+                <MemeTitle>We Gonna Be Alright</MemeTitle>
                 <MemeParagraph>
-                  I sure hope so<br/>
-                  Light up a blunt or pour up a drank<br/>
-                  
+                  I sure hope so!<br/>
+                  Light up a blunt or pour up a drink.
+                </MemeParagraph>
+              </MemeText>
+            </MemeContainer>
+          </MemeSection>
+
+          <MemeSection bgColor="#1a2639" padding="3rem" className="meme-section">
+            <MemeContainer>
+              <MemeImage src="/tomorrow.jpg" alt="New Meme 1" className="meme-image" />
+              <MemeText className="meme-text">
+                <MemeTitle>Tomorrow's Woes</MemeTitle>
+                <MemeParagraph>
+                  When you realize tomorrow is just another yesterday in disguise.
+                </MemeParagraph>
+              </MemeText>
+            </MemeContainer>
+          </MemeSection>
+
+          <MemeSection bgColor="#2c3e50" padding="4rem" className="meme-section">
+            <MemeContainer reverse>
+              <MemeImage src="/patrick.jpg" alt="New Meme 2" className="meme-image" />
+              <MemeText className="meme-text">
+                <MemeTitle>Try not to Tweak</MemeTitle>
+                <MemeParagraph>
+                  I'm not tweaking im chill!
+                </MemeParagraph>
+              </MemeText>
+            </MemeContainer>
+          </MemeSection>
+
+          <MemeSection bgColor="#34495e" padding="5rem" className="meme-section">
+            <MemeContainer>
+              <MemeImage src="/images-1.jpg" alt="New Meme 3" className="meme-image" />
+              <MemeText className="meme-text">
+                <MemeTitle>All good just tired</MemeTitle>
+                <MemeParagraph>
+                  Just need some sleep bro
                 </MemeParagraph>
               </MemeText>
             </MemeContainer>
