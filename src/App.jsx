@@ -257,7 +257,7 @@ const App = () => {
             </RandomThought>
           ))}
           <Title>I got a TON on my mind</Title>
-          <Subtitle>When your brain decides to host a rave without inviting you...</Subtitle>
+          <Subtitle>Comrades, who else got a TON on their mind...</Subtitle>
           <BrainEmoji onClick={increaseBrainLoad}>🧠</BrainEmoji>
           <ProgressBar>
             <ProgressFill style={{ width: `${brainLoad}%` }} />
@@ -272,9 +272,7 @@ const App = () => {
               <MemeText>
                 <MemeTitle>The Stress Spiral</MemeTitle>
                 <MemeParagraph>
-                  Brain: Let's replay every embarrassing moment!<br/>
-                  Me: Can we not?<br/>
-                  Brain: Remember when you called your teacher 'Mom'?
+                 Bills coming in and you still waiting on that life chainging 100x coin. Maybe its this one idk
                 </MemeParagraph>
               </MemeText>
             </MemeContainer>
@@ -284,12 +282,12 @@ const App = () => {
             <MemeContainer reverse>
               <MemeImage src="/tonOnmymind.jpg" alt="Brain overload" className="meme-image" />
               <MemeText>
-                <MemeTitle>The Breathing Dilemma</MemeTitle>
+                <MemeTitle>Average Male Day</MemeTitle>
                 <MemeParagraph>
                   To-do list:<br/>
                   1) Breathe<br/>
-                  2) Don't forget to breathe<br/>
-                  3) Wait, am I breathing manually now?
+                  2) Survive<br/>
+                  3) Dont become homeless
                 </MemeParagraph>
               </MemeText>
             </MemeContainer>
@@ -299,12 +297,11 @@ const App = () => {
             <MemeContainer>
               <MemeImage src="/tononmymind3.jpeg" alt="Mental explosion" className="meme-image" />
               <MemeText>
-                <MemeTitle>The Mind Party</MemeTitle>
+                <MemeTitle>We gone be aight</MemeTitle>
                 <MemeParagraph>
-                  Therapist: Your mind seems crowded.<br/>
-                  Me: It's not crowded, it's a 24/7 rave party of anxiety!<br/>
-                  Therapist: Have you tried meditation?<br/>
-                  Me: My thoughts started a mosh pit.
+                  I sure hope so<br/>
+                  Light up a blunt or pour up a drank<br/>
+                  
                 </MemeParagraph>
               </MemeText>
             </MemeContainer>
