@@ -360,7 +360,7 @@ const App = () => {
 
           <Button onClick={increaseBrainLoad}>
 
-            <a href='https://t.me/TonOnMyMindPortal'>Take a break with us</a>
+            <a href=''>Take a break with us</a>
            
           </Button>
         </Content>
